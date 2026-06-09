@@ -8,6 +8,7 @@ def home(request):
 
 
 def login_page(request):
+
     if request.method == "POST":
 
         username = request.POST.get("username")
@@ -24,20 +25,26 @@ def login_page(request):
 
 
 def dashboard(request):
+
     context = {
         'student_count': Student.objects.count(),
         'teacher_count': Teacher.objects.count(),
     }
 
     return render(request, 'admin_dashboard.html', context)
+
+
 def attendance(request):
     return render(request, 'attendance.html')
+
 
 def fees(request):
     return render(request, 'fees.html')
 
+
 def reports(request):
     return render(request, 'reports.html')
 
+
 def placements(request):
-    return render(request, 'placements.html')   
+    return render(request, 'placement.html')
