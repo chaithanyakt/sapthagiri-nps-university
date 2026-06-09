@@ -25,9 +25,13 @@ SECRET_KEY = 'django-insecure-%l48o$oki_5)22+&xt$ueph$y8ayq8v5f7_96&56^9ukdnzqca
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "sapthagiri-nps-university.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
-
+GIT STATUS
 # Application definition
 
 INSTALLED_APPS = [
