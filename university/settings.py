@@ -29,9 +29,10 @@ ALLOWED_HOSTS = [
     "sapthagiri-nps-university.onrender.com",
     "localhost",
     "127.0.0.1",
+
 ]
 
-GIT STATUS
+
 # Application definition
 
 INSTALLED_APPS = [
