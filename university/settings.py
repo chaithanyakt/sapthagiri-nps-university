@@ -29,9 +29,11 @@ ALLOWED_HOSTS = [
     "sapthagiri-nps-university.onrender.com",
     "localhost",
     "127.0.0.1",
-
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://sapthagiri-nps-university.onrender.com",
+]
 
 # Application definition
 
