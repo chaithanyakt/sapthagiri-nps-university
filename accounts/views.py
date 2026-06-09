@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 from students.models import Student
 from teachers.models import Teacher
 
@@ -7,6 +8,7 @@ def home(request):
     return render(request, 'home.html')
 
 
+@csrf_exempt
 def login_page(request):
 
     if request.method == "POST":
@@ -25,12 +27,10 @@ def login_page(request):
 
 
 def dashboard(request):
-
     context = {
         'student_count': Student.objects.count(),
         'teacher_count': Teacher.objects.count(),
     }
-
     return render(request, 'admin_dashboard.html', context)
 
 
